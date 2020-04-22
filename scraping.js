@@ -12,12 +12,18 @@ exports.scrapeData = () => {
         })
         .follow('a@href')
         .set({
-            author: '.date',
-            date: 'p.Normal strong'
+            date1: '.date',
+            date2: '.time',
+            author: 'p strong:last'
         })
-        .data(item => result.push(item))
+        .data(item => {
+          result.push({
+            url: item.url,
+            title: item.title,
+            date: item.date1 ? item.date1 : item.date2,
+            author: item.author
+          })
+        })       
         .done( () => resolve(result))
     })
-}
-
-
+  }

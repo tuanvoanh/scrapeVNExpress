@@ -5,7 +5,7 @@ const csvWriter = createCsvWriter({
         {id: 'url', title: 'URL'},
         {id: 'title', title: 'Title'},
         {id: 'author', title: 'Author'},
-        {id: 'date', title: 'date'}
+        {id: 'date', title: 'Date'}
     ]
 });
  
