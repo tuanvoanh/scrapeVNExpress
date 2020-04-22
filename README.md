@@ -1,6 +1,6 @@
 ### Installation
     
     npm install
-    node index.js
+    node main.js
 
 the exported file name is 'vnExpress.csv'
